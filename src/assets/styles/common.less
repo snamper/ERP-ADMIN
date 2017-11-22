@@ -1,0 +1,132 @@
+@import "./_variables";
+
+//  重置浏览器样式
+ul,li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+html {
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+}
+
+#app {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    min-width: @base;
+}
+
+// 清除浮动
+.clearfix {
+    *zoom: 1;
+    display: block;
+    &:after {
+        display: block;
+        clear: both;
+        content: '';
+        visibility: hidden;
+        height: 0;
+    }
+}
+.pg_content {
+    background: #fff;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.toolbar {
+    margin-bottom: 20px;
+}
+
+.el-pagination {
+    margin-top: 20px;
+}
+
+.box_title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 0 20px 0;
+    color: #657385;
+}
+
+.el-form-item_btns {
+    margin-left: 20px;
+}
+
+.search-form {
+    background: #fff;
+    padding-top: 20px;
+}
+
+/*是否打开更多选项开关*/
+.show-second-form-ctrl {
+    cursor: pointer;
+    float: left;
+    font-size: 14px;
+    padding: 11px 12px 11px 80px;
+    .text {
+        padding-right: 10px;
+    }
+    .icon {
+        transition: transform .2s linear;
+        &.open {
+            transform: rotate(180deg);
+        }
+    }
+}
+/*可显示隐藏的表单*/
+.second-form {
+    overflow: hidden;
+    transition: max-height .2s linear;
+    &.open {
+        max-height: 200px;
+    }
+}
+
+.pg-button-group {
+    display: inline-block;
+    vertical-align: middle;
+    & .pg-button:not(:last-child) .line {
+        display: inline-block;
+    }
+}
+
+.pg-button {
+    display: inline-block;
+    button {
+        display: inline-block;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        background: none;
+        -webkit-appearance: none;
+        text-align: center;
+        box-sizing: border-box;
+        outline: none;
+        margin: 0;
+        padding: 0 10px;
+        font-size: 14px;
+        border-style: none;
+        color: #d7b791;
+        vertical-align: middle;
+        i {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+    .line {
+        width: 2px;
+        background: #d4d4d4;
+        height: 16px;
+        vertical-align: middle;
+        display: none;
+    }
+}
